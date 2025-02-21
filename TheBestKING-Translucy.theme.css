@@ -8,8 +8,8 @@
 
 /* Variables */
 :root {
-  --home-image: url('https://i.imgur.com/233d55Y.gif');
   --app-bg: url(https://i.imgur.com/bgmVeyt.jpg);
+  --home-image: url(https://i.imgur.com/233d55Y.gif);
   --app-blur: 6px;
   --app-margin: 24px;
   --app-radius: 10px;
@@ -104,6 +104,80 @@
   --scrollbar-opacity: 0.2;
   --scrollbar-opacity-hover: 0.3;
   --scrollbar-width: 10px;
+  
+  /* Tatsu */
+	/* Color */
+	--accent: 37, 172, 232;
+	--accent-alt: 29, 101, 134;
+	--background-primary: rgba(0, 0, 0, 0);
+	--background-solid: #000000;
+	--background-solid-dark: #000000;
+	--background-solid-darker: #000000;
+	--blue-button: #2e3952;
+	--blue-button-border: #265d96;
+	--blue-button-hover: #3a496b;
+	--border-primary: #5c5c5c;
+	--border-secondary: #c0c0c0;
+	--brand-experiment: #3a496b;
+	--brand-experiment-15a: rgba(114,137,218,0.15);
+	--category-title-text-color: #3973AC;
+	--control-brand-foreground: #3a496b;
+	--default-channel-text: #949BA4;
+	--dm-white: 255, 255, 255;
+	--gray-button: #4f545c;
+	--gray-button-border: #919599;
+	--gray-button-hover: #646970;
+	--green-button: #508055;
+	--green-button-border: #00b344;
+	--green-button-hover: #629d68;
+	--md-black: 0, 0, 0;
+	--muted-channel-text: #4E5058;
+	--orange-button: #A54829;
+	--orange-button-border: #CC4300;
+	--orange-button-hover: #C65731;
+	--red-button: #712828;
+	--red-button-border: #ba1212;
+	--red-button-hover: #973535;
+	--scrollbar-color: rgba(55, 55, 55, 0.5);
+	--scrollbar-hover-color: rgba(75, 75, 75, 1);
+	--selection-background: #265d96;
+	--selection-text: #ffffff;
+	--server-hover-colour: 186, 186, 186;
+	--server-selected-colour: var(--accent, 53, 175, 234);
+	--server-unread-colour: 194, 178, 60;
+	--unread-channel-text: #ffffff;
+	--white-button: #ffffff;
+	--white-button-border: #808080;
+	--white-button-hover: #dedede;
+
+	/* BlurpleRecolor */
+	--accentcolor: var(--accent);
+	--vaccentcolor-hover: rgb(var(--accent));
+	--vaccentcolor-active: rgb(var(--accent));
+	
+	/* Font */
+	--font-display: var(--font-primary) !important;
+	
+	/* Variables */
+	--avatar-size: 32px;
+	--home-image: url('https://i.imgur.com/233d55Y.gif');
+	--AD-buttons: none;
+	--active-now: block;
+	--server-glow-intensity: 1;
+	--discord-opacity: 1.0;
+	
+	/* Sizes */
+	--scrollbar-width: 10px;
+	--server-spacing: 10px!important;
+	--settingsiconsgap: 14px;
+	--settingsiconssize: 18px;
+	--sidebar-width: 245px;
+	--titlebar-height: 20px;
+	--Channel-List-Width: 200px;						/* 200px, Discord default = 240px */
+	
+	--User-List-Width: 200px;							/* 200px, Discord default = 240px */
+	--User-Popout-Width: 240px;							/* 240px, Discord default = 300px */
+	--User-Status-Popout-Width: var(--Channel-List-Width);/* 240px, Discord default = 300px */
 }
 
 .theme-dark,
@@ -117,8 +191,153 @@
 }
 
 /* icon discord */
+
+/* Guilds */
+
+nav[class*="guilds-"] {
+    background: transparent;
+}
+ul[data-list-id='guildsnav'] {
+	--background-secondary: var(--background-primary);
+    	--background-primary: var(--background-primary);
+	margin-bottom: 70px;
+	background-color: var(--background-primary);
+	border-right: 1px solid rgba(black, 0.2);
+	box-shadow: inset -10px 0px 20px -10px rgba(black, 0.3);
+}
+
+ul[data-list-id='guildsnav'] ::-webkit-scrollbar {
+	display: none;
+}
+
+ul[data-list-id='guildsnav']>div[dir] {
+	padding-top: 18px;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"],
+ul[data-list-id='guildsnav'] [class^="pill-"]>div {
+	height: 40px !important;
+}
+
+ul[data-list-id='guildsnav'] div[style*="height: 56"],
+ul[id^="folder-items-"] {
+	height: auto !important;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"] span {
+	width: 10px;
+	margin-left: -5px;
+	border-radius: 20px;
+}
+
+[data-list-id='guildsnav'] [class^="pill-"] span[style^="opacity: 1; height: 40"] {
+	--header-primary: rgba(white, 1);
+}
+
+span[class^="expandedFolderBackground-"] {
+	--background-secondary: rgba(black, 0.25);
+	border-radius: 14px;
+	width: 40px;
+	left: 16px;
+}
+
+.wrapper-28eC3z,
+[data-list-id='guildsnav'] [data-dnd-name] > div,
+[data-list-id='guildsnav'] svg[width="48"] {
+	width: 40px;
+	height: 40px;
+}
+
 div[data-list-item-id="guildsnav___home"] {
 	background: var(--home-image) top center/110% no-repeat;
+}
+
+div[class^="unreadMentionsIndicatorBottom-"] {
+	bottom: 70px;
+}
+
+#app-mount [data-list-item-id="guildsnav___home"]>div {
+	color: transparent;
+	background-color: transparent;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"],
+div[data-list-item-id="guildsnav___guild-discover-button"] {
+	transition: 150ms ease;
+	opacity: 0.5;
+	background-color: var(--background-primary) !important;
+	color: rgba(white, 0.3) !important;
+	border: 1px dashed rgba(white, 0.3);
+	border-radius: 50px;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"]:hover,
+div[data-list-item-id="guildsnav___guild-discover-button"]:hover {
+	opacity: 1;
+}
+
+/* Hide Help Icon - Xyhlo */
+.toolbar__9293f a {
+  display: none;
+}
+
+/* BD Settings on Top - Skye */
+[class^=side] > :where(.bd-sidebar-header, [class*=-tab], [class*=-tab] + [class*=separator]) {
+  order: -1;
+}
+
+div:has(> .searchBar_c7e907) {
+  order: -2;
+}
+
+/* Hide Users */
+:root {
+  --hidden-user-width: 60px;
+  --user-width: 240px;
+}
+
+.container_c8ffbb,
+.membersWrap_c8ffbb {
+  transition-duration: var(--transition-time);
+  justify-content: unset;
+  min-width: unset;
+  width: var(--hidden-user-width);
+}
+
+.membersGroup_c8ffbb {
+  height: 0px;
+  transition-duration: var(--transition-time);
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.container__0f2e8 {
+  height: 0px;
+  transition-duration: var(--transition-time);
+  overflow: hidden;
+  padding: 0px;
+}
+
+.container_c8ffbb:hover .membersGroup_c8ffbb,
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb {
+  height: 40px;
+  padding-top: 24px;
+}
+
+.container_c8ffbb:hover {
+  .container__0f2e8 {
+    height: 48px;
+    padding: 8px;
+  }
+}
+
+.container_c8ffbb:hover,
+.membersWrap_c8ffbb:hover {
+  width: var(--user-width);
+}
+
+.profilePanel-2PWEok {
+  transition-duration: var(--transition-time);
 }
 
 /* APP ELEMENTS */
@@ -4832,11 +5051,12 @@ body {
   filter: none;
 }
 
-.childWrapper__6e9f8,
+/**.childWrapper__6e9f8,
 .circleIconButton__5bc7e {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity)) !important;
   color: var(--accent-text-color) !important;
 }
+**/
 
 .mention_c10249 {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
